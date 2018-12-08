@@ -17,8 +17,9 @@
         <%-- This is Declaration Tag --%>
         <p>The Current Time is <%= new java.util.Date() %> Preciously</p>
         
-        <form>
-            <input type="text" name="fname"/><br>
+        <form action="">
+            First Name<input type="text" name="fname"/><br>
+            Last Name<input type="text" name="lname"/><br>
              <input type="submit" value="Send"/>
         </form>
     </body>

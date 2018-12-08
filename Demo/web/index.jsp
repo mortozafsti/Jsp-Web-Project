@@ -16,5 +16,10 @@
         <h1>This is Index Page</h1>
         <%-- This is Declaration Tag --%>
         <p>The Current Time is <%= new java.util.Date() %> Preciously</p>
+        
+        <form>
+            <input type="text" name="fname"/><br>
+             <input type="submit" value="Send"/>
+        </form>
     </body>
 </html>

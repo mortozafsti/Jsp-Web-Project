@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>Text</servlet-name>
-        <servlet-class>Servlet.Text</servlet-class>
+        <servlet-name>Home</servlet-name>
+        <servlet-class>Servlet.Home</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Text2</servlet-name>
-        <servlet-class>Servlet.Text2</servlet-class>
+        <servlet-name>Service</servlet-name>
+        <servlet-class>Servlet.Service</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Help</servlet-name>
+        <servlet-class>Servlet.Help</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Text</servlet-name>
-        <url-pattern>/Text</url-pattern>
+        <servlet-name>Home</servlet-name>
+        <url-pattern>/home</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Text2</servlet-name>
-        <url-pattern>/Text2</url-pattern>
+        <servlet-name>Service</servlet-name>
+        <url-pattern>/service</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Help</servlet-name>
+        <url-pattern>/help</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

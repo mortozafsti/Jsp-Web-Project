@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author User
  */
-public class Text2 extends HttpServlet {
+public class Help extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,11 +35,15 @@ public class Text2 extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Text2</title>");            
+            out.println("<title>Servlet Help</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Text2 at Mortoza " + request.getContextPath() + "</h1>");
-            out.println("<a href=" + request.getContextPath() +"/Text>Tab 1</a>");
+            out.println("<h1>This is Help Page " + request.getContextPath() + "</h1>");
+            
+            out.println("<a href=" + request.getContextPath() + "/home>Home |</a>");
+            out.println("<a href=" + request.getContextPath() + "/service>Service |</a>");
+            out.println("<a href=" + request.getContextPath() + "/help>Help </a>");
+            
             out.println("</body>");
             out.println("</html>");
         }

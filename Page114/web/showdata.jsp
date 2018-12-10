@@ -15,10 +15,25 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Show Page</title>
     </head>
+    <style>
+        body,td{ 
+            font-family: verdana;
+            font-size: 20pt;
+        }
+    </style>
     <body>
         <h1>Show the Data</h1>
-        ${person.name}
-        ${person.email}
-        ${person.age}   
+
+        <table border="1">
+            <tr>
+                <td>Name:${person.name}</td>
+            </tr>
+            <tr>
+                <td>Email:${person.email}</td>
+            </tr>
+            <tr>
+                <td>Age:${person.age} </td>
+            </tr>
+        </table>
     </body>
 </html>

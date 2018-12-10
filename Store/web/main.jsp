@@ -25,18 +25,18 @@
             while (it.hasNext()) {
                 out.println("<tr>");
                 Products product = (Products) it.next();
-            }
+            
         %>
     <td>
-        <a href='CartAction?add=true&id=<%=roduct.getId()%>'>
-            <%=product.getName%>
+        <a href='CartAction?add=true&id=<%=product.getId()%>'>
+            <%=product.getName()%>
         </a>
     </td>
     <td>
         <%=product.getPrice()%>
     </td>
 </tr>
-
+<%}%>
 </table>
 </body>
 </html>

@@ -3,14 +3,26 @@
     <servlet>
         <servlet-name>FrontController</servlet-name>
         <servlet-class>servlet.FrontController</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>FrontController</servlet-name>
         <url-pattern>/FrontController</url-pattern>
     </servlet-mapping>
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>/*</url-pattern>
+            <include-prelude>/header.jsp</include-prelude>
+            <include-coda>footer.jsp</include-coda>
+        </jsp-property-group>
+    </jsp-config>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    
 </web-app>

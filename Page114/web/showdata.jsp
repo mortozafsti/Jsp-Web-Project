@@ -8,6 +8,11 @@
 
 
 </jsp:useBean>
+<jsp:useBean id="address" class="Persons.Address" scope="request">
+    <jsp:setProperty name="address" property="*"/>
+
+
+</jsp:useBean>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -33,6 +38,15 @@
             </tr>
             <tr>
                 <td>Age:${person.age} </td>
+            </tr>
+            <tr>
+                <td>Line:${address.line} </td>
+            </tr>
+            <tr>
+                <td>City:${address.city}</td>
+            </tr>
+            <tr>
+                <td>City:${address.country}</td>
             </tr>
         </table>
     </body>

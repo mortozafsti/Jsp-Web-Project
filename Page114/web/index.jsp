@@ -33,7 +33,7 @@
             </tr>
 
             <tr>
-            <form action="index.jsp" method="post">
+            <form action="showdata.jsp" method="post">
                 <td><input type="text" name="name"/></td>
                 <td><input type="text" name="email"/></td>
                 <td><input type="number" name="age"/></td>

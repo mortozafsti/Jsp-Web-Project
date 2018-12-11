@@ -22,11 +22,11 @@
             <%while (item.hasNext()) {%>
             <tr>
                 <%Products p = (Products) item.next();%>
-                <td><%=p.getName() %></td>
+                <td><%=p.getName()%></td>
                 <td><%=p.getPrice()%></td>
             </tr>
-                }
-                <%}%>
+            }
+            <%}%>
         </table>
     </body>
 </html>

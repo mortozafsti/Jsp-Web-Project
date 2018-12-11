@@ -24,7 +24,7 @@ public class CartAction implements Action{
         }
         return "/cart.jsp";
     }
-    private void addToCart(HttpServletRequest request,Cart cart){ 
+    private void addToCart(HttpServletRequest request,Cart cart) throws ItemAlreadyAddedException{ 
         HashMap products = (HashMap) request.getSession().getServletContext().getAttribute("products");
         try {
             String id = request.getParameter("id");
@@ -34,8 +34,8 @@ public class CartAction implements Action{
             request.getSession().setAttribute("cart", cart);
             
             
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (NumberFormatException e) {
+             throw new ItemAlreadyAddedException();
         }
     }
 }

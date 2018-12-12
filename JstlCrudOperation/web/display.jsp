@@ -43,7 +43,7 @@
                         <td><c:out value="${row.pname}"/></td>
                         <td><c:out value="${row.pqty}"/></td>
                         <td><a href="update.jsp?id=<c:out value="${row.id}"/>">Update</a></td>
-                        <td><a href="update.jsp?id=<c:out value="${row.id}"/>">Delete</a></td>
+                        <td><a href="javascript:goConfirm('Sure to delete this record?' ,'deletedb.jsp?id=<c:out value="${row.id}"/>')">Delete</a></td>
                     </tr>
                 </c:forEach>
             </table>

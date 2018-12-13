@@ -13,7 +13,11 @@
     </head>
     <body>
         <h1>The Collection of Book</h1>
-        <a href="core_set.jsp">Core_Set</a>
-        <a href="core_remove.jsp">Core_Remove</a>
+        <a href="core_set.jsp">Core_Set</a><br>
+        <a href="core_remove.jsp">Core_Remove</a><br>
+        <a href="test.jsp">Text</a><br>
+        <a href="core_if.jsp">Core_If</a><br>
+        <a href="core_takens.jsp">Core_Tokens</a><br>
+        <a href="local.jsp">Core_Locals</a><br>
     </body>
 </html>

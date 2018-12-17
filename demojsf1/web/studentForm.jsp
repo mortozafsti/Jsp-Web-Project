@@ -18,17 +18,13 @@
             <h1>Hello World!</h1>
 
             <h:form>
-                <table>
-                    <tr>
-                        <td>Name:</td>
-                        <td><h:inputText value="#{stuCon.stu.name}"/></td>
-                    </tr>
-                    <tr>
-                        <td>Email:</td>
-                        <td><h:inputText value="#{stuCon.stu.email}"/></td>
-                    </tr>
+               
+                        <h:inputText value="#{stud.stu.name}" size="35"/>
+                  
+                        <h:inputText value="#{stud.stu.email}" size="35"/>
+                    
 
-                </table>
+               
                 <h:commandButton value="Search" action="submit"/>
             </h:form>
 

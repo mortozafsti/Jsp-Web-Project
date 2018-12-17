@@ -18,19 +18,17 @@
         <h1>Hello World!</h1>
 
         <h:form>
-        <table>
-            <tr>
-                <td><h:outputText value="#{stuCon.stu.name}"/></td>
-            </tr>
-            <tr>
-                <td><h:outputText value="#{stuCon.stu.email}"/></td>
-            </tr>
+        
+                <h:outputText value="#{stud.stu.name}"/>
+        
+            <h:outputText value="#{stud.stu.email}"/>
+            
 <!--            <tr>
                 <td></td>
                 <td><input type="submit" value="Submit"/></td>
             </tr>-->
-        </table>
-             <h:commandButton value="Search" action="submit"/>
+    
+             
     </h:form>
 
     </body>

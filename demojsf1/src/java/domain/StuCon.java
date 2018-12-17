@@ -13,7 +13,7 @@ import javax.faces.bean.SessionScoped;
  * @author User
  */
 @SessionScoped
-@ManagedBean
+@ManagedBean( name = "stud")
 public class StuCon {
     
     private Stu stu;

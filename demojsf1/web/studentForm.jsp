@@ -18,13 +18,10 @@
             <h1>Hello World!</h1>
 
             <h:form>
-               
                         <h:inputText value="#{stud.stu.name}" size="35"/>
                   
                         <h:inputText value="#{stud.stu.email}" size="35"/>
-                    
 
-               
                 <h:commandButton value="Search" action="submit"/>
             </h:form>
 

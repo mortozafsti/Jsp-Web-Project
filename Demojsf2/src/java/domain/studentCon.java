@@ -21,4 +21,7 @@ public class studentCon {
         this.students = students;
     }
     
+    public void reset(){ 
+         students = new student();
+    }
 }

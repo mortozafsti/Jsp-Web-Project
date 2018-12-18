@@ -6,6 +6,25 @@ public class student {
     private String name;
     private String email;
     private String age;
+    private String gender;
+    private String round;
+
+    public String getRound() {
+        return round;
+    }
+
+    public void setRound(String round) {
+        this.round = round;
+    }
+
+    
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     public String getName() {
         return name;

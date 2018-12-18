@@ -16,11 +16,13 @@
         </head>
         <body>
             <h1>Hello World!</h1>
-        <h:form>
-            Name:<h:outputText value="#{studentCon.students.name}"/>
-            Email:<h:outputText value="#{studentCon.students.email}"/>
-            Age:<h:outputText value="#{studentCon.students.age}"/>                             
-        </h:form>
-    </body>
-</f:view>
+            <h:form>
+                Name:<h:outputText value="#{studentCon.students.name}"/><br>
+                Email:<h:outputText value="#{studentCon.students.email}"/><br>
+                Age:<h:outputText value="#{studentCon.students.age}"/><br>                            
+                Gender:<h:outputText value="#{studentCon.students.gender}"/><br>                            
+                Round:<h:outputText value="#{studentCon.students.round}"/><br>                            
+            </h:form>
+        </body>
+    </f:view>
 </html>

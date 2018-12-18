@@ -15,7 +15,7 @@
             <title>JSP Page</title>
         </head>
         <body>
-            <h1>Hello World!</h1>
+            <h1>This is Faltu Foem</h1>
         <h:form>
             <table>
                 <tr>
@@ -30,9 +30,28 @@
                     <td>Age:</td>
                     <td><h:inputText value="#{studentCon.students.age}"/></td>
                 </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td><h:selectOneRadio value="#{studentCon.students.gender}">
+                            <f:selectItem itemValue="Male" itemLabel="Male"/>
+                            <f:selectItem itemValue="Female" itemLabel="Female"/>
+                    </h:selectOneRadio></td>
+                </tr>
+                <tr>
+                    <td>Round</td>
+                    <td><h:selectOneMenu value="#{studentCon.students.round}">
+                            <f:selectItem itemValue="" itemLabel="Select the Round"/>
+                            <f:selectItem itemValue="37" itemLabel="Select -37"/>
+                            <f:selectItem itemValue="38" itemLabel="Select -38"/>
+                            <f:selectItem itemValue="39" itemLabel="Select -39"/>
+                            <f:selectItem itemValue="40" itemLabel="Select -40"/>
+                    </h:selectOneMenu></td>
+                </tr>
             </table> 
+                <h:commandButton value="Send" action="submit"/>
+                <h:commandButton value="Reset" action="#{studentCon.reset()}"/>
         </h:form>
-            <h:commandButton value="Send" action="submit"/>
+            
     </body>
 </f:view>
 </html>

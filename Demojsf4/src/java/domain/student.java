@@ -6,10 +6,13 @@ public class student {
     private String name;
     private String age;
     private String gender;
-    private String education[];
+    private String[] education;
     private String round;
     private String email;
     private String password;
+
+    public student() {
+    }
 
     public String getName() {
         return name;

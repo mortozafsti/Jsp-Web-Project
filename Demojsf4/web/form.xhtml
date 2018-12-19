@@ -29,7 +29,7 @@
                     </h:selectOneRadio>
 
                     <h:outputLabel>Education:</h:outputLabel>
-                    <h:selectManyCheckbox layout="lineDirection" value="#{studentCon.stu.education}">
+                    <h:selectManyCheckbox value="#{studentCon.stu.education}">
                         <f:selectItem itemValue="SSC" itemLabel="SSC"></f:selectItem>
                         <f:selectItem itemValue="HSC" itemLabel="HSC"></f:selectItem>
                         <f:selectItem itemValue="Diploma" itemLabel="Diploma"></f:selectItem>
@@ -42,7 +42,7 @@
                     <h:outputLabel>Password:</h:outputLabel>
                     <h:inputSecret value="#{studentCon.stu.password}"></h:inputSecret>
                 </h:panelGrid>
-                <h:commandButton value="Send" action="submit"></h:commandButton>
+                <h:commandButton value="Send" action="studentrespone"></h:commandButton>
                 <h:commandButton value="Reset" action="#{studentCon.reset()}"></h:commandButton>
                 
                 

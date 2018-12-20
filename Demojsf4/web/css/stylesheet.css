@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #201c1b;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13px;
+    line-height: 1.7em; 
+    background-color: #201c1b;
+    background-image: url(../images/tooplate_body.jpg);
+    background-repeat: repeat-x;
+    background-position: top;
+}
+#tooplate_menu{
+    float: right;
+    width: 800px;
+    height: 65px;
+    margin: 0 auto;
+
+}
+#tooplate_menu ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-top: 50px;
+}
+#tooplate_menu ul li{
+    margin: 0;
+    padding: 0;
+    display: inline;
+
+}
+#tooplate_menu ul li a{ 
+    
+    font-size: 14px;
+    color:  goldenrod;
+    text-decoration: none;
+    padding: 30px 0 0 0;
+    text-align: center;
+    outline: none;
+    border: none;
+    
+}
+#tooplate_menu ul li a:hover{
+    color: blueviolet;
+}

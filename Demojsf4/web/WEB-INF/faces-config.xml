@@ -9,6 +9,7 @@
         <navigation-case>
             <from-outcome>submit</from-outcome>
             <to-view-id>/search.xhtml</to-view-id>
+             <redirect/>
         </navigation-case>
     </navigation-rule>
 </faces-config>

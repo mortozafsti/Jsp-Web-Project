@@ -4,12 +4,18 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-       
     <h:head>
         <title>Facelet Title</title>
     </h:head>
-    
+    <h:body>
         Hello from Facelets
+        <h:form id="form1">
+            ID:<h:inputText value="#{studentBean.student.id}"></h:inputText><br/>
+            
+            <p:commandButton action="#{studentBean.searchById()}" value="Search" update=":form2"></p:commandButton>
+        </h:form>
+        <br/>
+        <br/>
         <h:form id="form2">
             Name: <h:inputText value="#{studentBean.student.name}"></h:inputText><br/>
             Round: <h:selectOneMenu value="#{studentBean.student.round}">
@@ -34,33 +40,6 @@
             <h:inputTextarea value="#{studentBean.student.msg}"></h:inputTextarea>
             <h:commandButton action="#{studentBean.save()}" value="Submit"></h:commandButton>
         </h:form>
-        <br/>
-        
-        
-        <p:dataTable var="s" value="#{studentBean.list}"> 
-            <p:column headerText="Id">
-                <h:outputText value="#{s.id}" />
-            </p:column>
-
-            <p:column headerText="Name">
-                <h:outputText value="#{s.name}" />
-            </p:column>
-
-            <p:column headerText="Course Completed ">
-                <h:outputText value="#{s.completedCourse}" />
-            </p:column>
-
-            <p:column headerText="Round">
-                <h:outputText value="#{s.round}" />
-            </p:column>
-            <p:column headerText="Gender">
-                <h:outputText value="#{s.gender}" />
-            </p:column>
-            <p:column headerText="Message">
-                <h:outputText value="#{s.msg}" />
-            </p:column>
-        </p:dataTable>
-    
-        
+    </h:body>
 </html>
 

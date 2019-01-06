@@ -34,20 +34,21 @@ public class StudentService {
             SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
             Session session = sessionFactory.getCurrentSession();
             Transaction t = session.beginTransaction();
-            Student student1 =(Student) session.get(Student.class,id);
+            student =(Student) session.get(Student.class,id);
             
             t.commit();
         } catch (Exception e) {
         }
         return student;
     }
-    public static List<Student> getList(int id) {
+    public static List<Student> getList() {
         List<Student> student = new ArrayList<>();
         try {
             SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
             Session session = sessionFactory.getCurrentSession();
-            student = session.createQuery("From stu").list();
             Transaction t = session.beginTransaction();
+            student = session.createQuery("FROM Student").list();
+            
             t.commit();
         } catch (Exception e) {
         }

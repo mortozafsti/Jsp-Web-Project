@@ -25,6 +25,8 @@ public class Student {
     private String completedCourse;
     
     private String gender;
+    
+    private String msg;
 
     public int getId() {
         return id;
@@ -64,6 +66,20 @@ public class Student {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+    
+    @Override
+    public String toString() {
+        return "Student{" + "id=" + id + ", name=" + name + ", round=" + round + ", completedCourse=" + completedCourse + ", gender=" + gender + '}';
     }
     
     

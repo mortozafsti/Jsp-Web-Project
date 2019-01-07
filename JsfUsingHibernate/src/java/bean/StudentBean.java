@@ -78,4 +78,8 @@ public class StudentBean {
         s = studentService.getById(student.getId());
         return s;
     }
+    
+    public void reset(){ 
+        student = new Student();
+    }
 }

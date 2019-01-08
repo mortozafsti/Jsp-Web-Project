@@ -3,8 +3,12 @@ package bean;
 import entity.Student;
 import java.util.ArrayList;
 import java.util.List;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 import service.StudentService;
 
+@ManagedBean
+@ViewScoped
 public class StudentBean {
 
     private StudentService studentService = new StudentService();

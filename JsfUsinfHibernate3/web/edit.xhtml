@@ -13,6 +13,9 @@
             <h:commandButton action="edit.xhtml" value="Update Page"></h:commandButton>
             <h:commandButton action="delete.xhtml" value="Delete Page"></h:commandButton>
             <h:panelGrid columns="2">
+                <h:outputLabel value="Id:"></h:outputLabel>
+                <h:inputText value="#{studentBean.student.id}"></h:inputText>
+                
                 <h:outputLabel value="Name:"></h:outputLabel>
                 <h:inputText value="#{studentBean.student.name}"></h:inputText>
                 
@@ -41,7 +44,7 @@
                 <h:outputLabel value="Msg:"></h:outputLabel>
                 <h:inputText value="#{studentBean.student.msg}"></h:inputText>
             </h:panelGrid>
-            <h:commandButton action="#{studentBean.save()}" value="Submit"></h:commandButton>
+            <h:commandButton action="#{studentBean.save()}" value="Update"></h:commandButton>
             <h:commandButton action="#{studentBean.reset()}" value="Reset"></h:commandButton>
         </h:form>
         <br/>

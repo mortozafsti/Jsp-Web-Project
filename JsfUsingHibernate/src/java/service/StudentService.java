@@ -17,6 +17,7 @@ public class StudentService {
         Transaction t = session.beginTransaction();
         session.saveOrUpdate(student);
         t.commit();
+        
     }
 
     public static void delete(Student student) {
@@ -29,6 +30,7 @@ public class StudentService {
     }
 
     public static Student getById(int id) {
+        
         Student student = new Student();
         try {
             SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
@@ -38,6 +40,7 @@ public class StudentService {
             
             t.commit();
         } catch (Exception e) {
+            
         }
         return student;
     }

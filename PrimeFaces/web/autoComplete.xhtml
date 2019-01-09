@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
@@ -11,25 +12,45 @@
             <p:panelGrid columns="2">
                 <p:outputLabel value="Id:" for="acID"/>
                 <p:autoComplete id="acID" value="#{autoComplete.id}" completeMethod="#{autoComplete.mmm}"/>
-                
+
                 <p:outputLabel value="Name:" for="acName"/>
                 <p:autoComplete id="acName" value="#{autoComplete.name}" completeMethod="#{autoComplete.mmm}"/>
-                
+
                 <p:outputLabel value="Email:" for="acEmail"/>
                 <p:autoComplete id="acEmail" value="#{autoComplete.email}" completeMethod="#{autoComplete.mmm}"/>
-                
-                <p:commandButton value="Submit" action="#{autoComplete.saveA()}"></p:commandButton>
+
+                <p:outputLabel value="Date:"></p:outputLabel>
+                <p:calendar value="#{autoComplete.date}">
+
+                </p:calendar>
+
+                <p:outputLabel value="C_Course:"></p:outputLabel>
+                <p:selectManyCheckbox value="#{checkBoxbean.c_course}">
+                    <f:selectItem itemValue="Bangladesh" itemLabel="Bangladesh"></f:selectItem>
+                    <f:selectItem itemValue="Japan" itemLabel="Japan"></f:selectItem>
+                    <f:selectItem itemValue="Canada" itemLabel="Canada"></f:selectItem>
+                    <f:selectItem itemValue="Srilanka" itemLabel="Srilanka"></f:selectItem>
+                </p:selectManyCheckbox>
+                <p:commandButton value="Submit"  oncomplete="PF('ddd').show()" update="display"></p:commandButton>
             </p:panelGrid>
+            <p:dialog id="dialog" widgetVar="ddd" resizable="false" header="Auto_Complete Box" showEffect="fade" modal="true">
+                <p:panelGrid id="display" columns="1">
+                    <h:outputText value="Id: #{autoComplete.id}"/>
+                    <h:outputText value="Name: #{autoComplete.name}"/>
+                    <h:outputText value="Email: #{autoComplete.email}"/>
+                    <h:outputText value="Email: #{autoComplete.date}"/>
+                </p:panelGrid>
+            </p:dialog>
         </h:form>
         <br/>
         <br/>
         <br/>
         <h:form>
-           
+
             <p:panelGrid columns="2">
                 <p:outputLabel value="SomeText:"></p:outputLabel>
                 <p:inputTextarea value="#{textAreaBean.value}" rows="1" cols="30" autoResize="true"/>
-                
+
                 <p:commandButton value="Send" action="#{textAreaBean.saveT()}"/>
             </p:panelGrid>
         </h:form>

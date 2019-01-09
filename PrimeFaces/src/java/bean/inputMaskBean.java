@@ -21,5 +21,7 @@ public class inputMaskBean {
     public void save(){ 
         
         System.out.println("Phone:"+phone);
+      
+        
     }
 }

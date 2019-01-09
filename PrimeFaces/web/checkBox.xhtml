@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:outputLabel value="C_Course:"></p:outputLabel>
+            <p:selectManyCheckbox value="#{checkBoxbean.c_course}">
+                <f:selectItem itemValue="Bangladesh" itemLabel="Bangladesh"></f:selectItem>
+                <f:selectItem itemValue="Japan" itemLabel="Japan"></f:selectItem>
+                <f:selectItem itemValue="Canada" itemLabel="Canada"></f:selectItem>
+                <f:selectItem itemValue="Srilanka" itemLabel="Srilanka"></f:selectItem>
+            </p:selectManyCheckbox>
+            
+            <p:commandButton action="#{checkBoxbean.saveCl()}" value="Submit"/>
+        </h:form>
+    </h:body>
+</html>
+

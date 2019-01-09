@@ -18,7 +18,19 @@
                 <p:outputLabel value="Email:" for="acEmail"/>
                 <p:autoComplete id="acEmail" value="#{autoComplete.email}" completeMethod="#{autoComplete.mmm}"/>
                 
-                <p:commandButton value="Submit"></p:commandButton>
+                <p:commandButton value="Submit" action="#{autoComplete.saveA()}"></p:commandButton>
+            </p:panelGrid>
+        </h:form>
+        <br/>
+        <br/>
+        <br/>
+        <h:form>
+           
+            <p:panelGrid columns="2">
+                <p:outputLabel value="SomeText:"></p:outputLabel>
+                <p:inputTextarea value="#{textAreaBean.value}" rows="1" cols="30" autoResize="true"/>
+                
+                <p:commandButton value="Send" action="#{textAreaBean.saveT()}"/>
             </p:panelGrid>
         </h:form>
     </h:body>

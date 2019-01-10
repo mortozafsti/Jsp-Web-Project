@@ -17,7 +17,57 @@
                 <f:selectItem itemValue="Srilanka" itemLabel="Srilanka"></f:selectItem>
             </p:selectManyCheckbox>
             
-            <p:commandButton action="#{checkBoxbean.saveCl()}" value="Submit"/>
+            <p:commandButton action="#{checkBoxbean.saveCl()}" icon="ui-icon-check" value="Submit"/>
+            
+            <p:panel header="Mortoza" footer="Copyright @2019">
+                <h:outputText value="This is mahedee he is very good girl "/>
+                <f:facet name="options">
+                    <p:menu>
+                            <p:submenu label="Home">
+                                <p:menuitem value="Setting" icon="ui-icon-home" onclick="pannel.toggle()"/>
+                                <p:menuitem value="Close" icon="ui-icon-close" onclick="pannel.close()"/>
+                            </p:submenu>                   
+                    </p:menu>
+                </f:facet>
+            </p:panel>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <p:panel header="Primefaces" footer="The CookBook">
+                <h:outputText value="This is mahedee he is very good girl "/>
+                <f:facet name="options">
+                    <p:menu>
+                        <p:submenu label="Settings">
+                            <p:menuitem value="Toggle" url="#" icon="ui-icon-newwin" onclick="pannel.toggle()"/>
+                            <p:menuitem value="Remove" url="#" icon="ui-icon-close" onclick="pannel.close()"/>
+                        </p:submenu>
+                    </p:menu>
+                </f:facet>
+            </p:panel>
+            <br/>
+            <br/>
+            <br/>
+            <p:panelGrid columns="2">
+                <f:facet name="header">User Information</f:facet>
+                    
+                <h:outputLabel for="firstname" value="First Name:"></h:outputLabel>
+                <p:inputText id="firstname" label="firstname" value=""></p:inputText>
+                
+                <h:outputLabel for="lastname" value="Last Name:"></h:outputLabel>
+                <p:inputText id="lastname" value="" label="lastname" rendered="true"></p:inputText>
+                
+                <h:outputLabel for="email" value="Email:"></h:outputLabel>
+                <p:inputText id="email" value="" label="email" rendered="true"></p:inputText>
+                
+                <h:outputLabel for="age" value="Age:"></h:outputLabel>
+                <p:inputText id="age" value="" label="age" rendered="true"></p:inputText>
+                
+                <f:facet name="footer">
+                    <p:commandButton type="button" value="Save" icon="ui-icon-check"/>
+                    <p:commandButton type="button" value="Remove" icon="ui-icon-close"/>
+                </f:facet>
+            </p:panelGrid>
         </h:form>
     </h:body>
 </html>

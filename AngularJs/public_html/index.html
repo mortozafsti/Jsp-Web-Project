@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+    </head>
+    <body>
+<!--        <div ng-app="" ng-init="myname='kkkk'">
+            <h1>My Name is {{myname}}</h1>
+            <label>Change Your Name:</label><input type="text" ng-model="myname"/>
+            
+            <br/>
+            <h1>Table Information</h1>
+            
+        </div>-->
+       
+        <h1>Table Information   </h1>
+        <div ng-app="" ng-init="hospital=[
+            {name:'BRB Hospital',area:'Dahaka',patients:1000},
+            {name:'Hp Hospital',area:'bghh',patients:2000},
+            {name:'JP Hospital',area:'olpl',patients:9000},
+            {name:'IOP Hospital',area:'aaaa',patients:7000}
+        ]"> 
+            <table border="1">
+                <tr ng-repeat="hospita in hospital">
+                    <td>{{hospita.name}}</td>
+                    <td>{{hospita.area}}</td>
+                    <td>{{hospita.patients}}</td>
+                <tr></tr>
+                <tr>
+                    <td colspan="3">Patients in First Two Hospital: {{hospital[0].patients+hospital[1].patients}}</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

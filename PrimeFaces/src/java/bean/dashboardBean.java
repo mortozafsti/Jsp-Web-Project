@@ -34,9 +34,11 @@ public class dashboardBean implements Serializable {
         
         column2.addWidget("dictionary");  
         column2.addWidget("mortoza");  
+        column2.addWidget("weather");  
         
         column3.addWidget("weather");
         column3.addWidget("translation");
+        column3.addWidget("dictionary");
 
         model.addColumn(column1);
         model.addColumn(column2);

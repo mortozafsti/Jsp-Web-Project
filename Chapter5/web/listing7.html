@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+        <script type="text/javascript">
+            
+            function printMessage(unObject) { 
+                if (angular.isFunction(unObject)) {
+                    unObject();
+                }else{ 
+                    console.log(unObject); 
+                }
+            }
+            var variable1 = function sayHello(){ 
+                console.log("Hello"); 
+            };
+            
+            var variable2 = "Goodby";
+            
+            printMessage(variable1);
+            printMessage(variable2);
+            
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

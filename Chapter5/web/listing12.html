@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+        <script type="text/javascript">
+           
+           var myDate = new Object();
+           myDate.name = "Kalam";
+           myDate.weather = "Sunny Leaon";
+           
+           console.log("Helo " + myDate.name + ".");
+           console.log("Today is " + myDate.weather + ".");
+           
+           //Object Literal
+           var muDates = { 
+               name : "Hasan",
+               weather : "Woarm"
+           };
+           console.log("Hello " + muDates.name + ".");
+           console.log("Toda's Weather is " + muDates.weather + ".");
+           
+           //Using Functions as Methods 
+           var myDates = { 
+               name : "Hasan",
+               weather : "Woarm",               
+               printMessage: function (){ 
+                console.log(log);   
+               }
+           };
+        </script>
+    </head>
+    <body>
+        <div><h1>Creating Object in Different Way And Object Literal</h1></div>
+    </body>
+</html>

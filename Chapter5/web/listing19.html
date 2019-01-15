@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+        <script type="text/javascript">
+            
+            var myData = {
+                name: "Hasan",
+                weather: "Woarm",
+                printMessage() { 
+                    console.log("Hello " + this.name + ".");
+                    console.log("Today is " + this.weather + ".");
+                }
+            };
+            
+            for (var prop in myData) {
+                console.log("Name: " + prop + " Values: " + myData[prop]);
+            }
+            
+            console.log("---"); 
+            
+            angular.forEach(myData, function (value, key){ 
+               console.log("Name: " + key + "Values: " + value);  
+            });
+            myData.dayOfWeek = "Monday";
+            
+        </script>
+    </head>
+    <body>
+        <div><h1>Enumerating an Object’s Properties </h1></div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+        <script type="text/javascript">
+            console.log("This is a statement"); 
+            console.log("This is also a statement");
+            
+            function myFunc(){ 
+                console.log("Hello"); 
+            }
+            //With Parametter
+            function myFuncW(name,weather){ 
+                console.log("Hello " + name + "."); 
+                console.log("It is " + weather + " today"); 
+            }
+            myFuncW("Mortoza","sunny");
+            
+            //Return calling
+            function myFuncR(name,weather){ 
+                return ("Hello " + name + "."); 
+            }
+            console.log(myFuncR("Hannan")); 
+            
+            
+        </script>
+    </head>
+    <body>
+        This is the simple example
+    </body>
+</html>

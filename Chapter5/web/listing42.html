@@ -11,17 +11,20 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="js/bootstrap.css" rel="stylesheet"/>
         <link href="js/bootstrap-theme.css" rel="stylesheet"/>
-        <link href="js/angular.min.js"/>
-        <script>
-            
-          var demo = angular.module("demo",[]);
-          demo.controller("demoCtrl", function($scope,$http){ 
-              var promise = $http.get("todo.json");
-              promise.success(function (data){ 
-                  $scope.todos = data;
-              });
-          });
-          
+        <script src="js/angular.min.js"></script>
+        <script type="text/javascript">
+
+            var myApp = angular.module("demo", []);
+
+            myApp.controller("demoCtrl", function ($scope, $http) {
+                $http.get("todo.json").then(function (response) {
+                    $scope.todos = response.data;
+                }, function () {
+                    $scope.todos = [{action: "Error"}];
+                });
+
+            });
+
         </script>
     </head>
     <body ng-controller="demoCtrl">

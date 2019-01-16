@@ -17,11 +17,14 @@ and open the template in the editor.
             var myApp = angular.module("demo", []);
 
             myApp.controller("demoCtrl", function ($scope, $http) {
-                $http.get("todo.json").then(function (response) {
+               $http.get("todo.json").then(function (response){         
                     $scope.todos = response.data;
-                }, function () {
-                    $scope.todos = [{action: "Error"}];
                 });
+//                $http.get("todo.json").then(function (response) {
+//                    $scope.todos = response.data;
+//                }, function () {
+//                    $scope.todos = [{action: "Error"}];
+//                });
 
             });
 

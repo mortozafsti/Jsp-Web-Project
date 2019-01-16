@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="sportStore">
+    <head>
+        <title>Sports Store</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="jss/bootstrap.css" rel="stylesheet"/>
+        <link href="jss/bootstrap-theme.css" rel="stylesheet"/>
+        <script src="jss/angular.min.js"></script>
+        <script>
+            angular.module("sportStore", []);
+        </script>
+        <script src="controllers/sportStore.js"></script>
+    </head>
+    <body ng-controller="sportsStoreCtrl">
+        <div class="navbar navbar-inverse">
+            <a class="navbar-brand" href="#">SPORTS STORE</a>
+        </div>
+        <div class="panel panel-default row">
+            <div class="col-xs-3">
+                Category Goes Here
+            </div>
+            <div class="col-xs-8">
+                <div class="well" ng-repeat="item in date.products">
+                    <h3>
+                        <strong>{{item.name}}</strong>
+                        <span class="pull-right label label-primary ng-binding">
+                            {{item.price | currency}}
+                        </span>
+                    </h3>
+                    <span class="lead">{{item.description}}</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

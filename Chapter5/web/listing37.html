@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="js/angular.min.js"/>
+        <script type="text/javascript">
+
+            var myArray = [100, "Arrao", true];
+
+            for (var i = 0; i < myArray.length; i++) {
+                console.log("Index " + i + " :" + myArray[i]); 
+            }
+            console.log("-----");
+            
+            //Indefined value
+            var hhh = { 
+                name: "Adam",
+                weather: "Sunny",
+            };
+            console.log("Prop: " +hhh.doesntexist); 
+            
+            //Using undefined and null
+            var jjj = { 
+                name: "kalam",
+                weather: "Sunny",
+            };
+            console.log("Var "+jjj.weather);
+            console.log("Prop "+ ("weather" in jjj));
+            
+            console.log("-------");
+            
+            jjj.weather = "Cloudy";
+            console.log("Var "+jjj.weather);
+            console.log("Prop "+ ("weather" in jjj));
+            
+            console.log("-------");
+            
+            jjj.weather = null;
+            console.log("Var "+jjj.weather);
+            console.log("Prop "+ ("weather" in jjj));
+//            
+            angular.forEach(myArray, function(value, key){ 
+                console.log(key + ":" + value); 
+            });
+
+            
+        </script>
+    </head>
+    <body>
+        <div>Enumerating the Contents of an Array </div>
+    </body>
+</html>

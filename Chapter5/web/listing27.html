@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="js/angular.min.js"/>
+        <script type="text/javascript">
+            
+            var myData1 = { 
+                name: "Adam",
+                weather: "Sunny",
+            };
+            var myData2 = { 
+                name: "Adam",
+                weather: "Sunny",
+            };
+            
+            var myData3 = myData2;
+            
+            var test1 = myData1 == myData2;
+            var test2 = myData2 == myData3;
+            var test3 = myData1 === myData2;
+            var test4 = myData2 === myData3;
+            
+            console.log("Test1: " +test1 + "Test2: " + test2);
+            console.log("Test3: " +test3 + "Test4: " + test4);
+            
+            var m = 5 + 5;
+            var m1 = 5 + "5";
+            
+            console.log("Result1: " + m);
+            console.log("Result2: " + m1);
+            
+            var mydata6 = (5).toString() + String(5);
+            
+            console.log("Result6 : "+mydata6); 
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>

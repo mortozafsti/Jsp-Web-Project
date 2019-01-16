@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="js/angular.min.js"/>
+        <script type="text/javascript">
+          
+          var myArray = new Array();
+          myArray[0] = 100;
+          myArray[1] = "Adam";
+          myArray[2] = true;
+          
+          var myArrays = [100,"Adam",true];
+          myArrays[0] = "Thusday";
+          console.log("Index 0: " + myArrays[0]); 
+          
+          //Detecting Arrays
+          
+          console.log(angular.isArray([100,"sssss",true]));
+          console.log(angular.isArray("sss"));
+          console.log(angular.isArray(23));
+          
+          
+        </script>
+    </head>
+    <body>
+        <div> Creating and Populating an Array </div>
+    </body>
+</html>

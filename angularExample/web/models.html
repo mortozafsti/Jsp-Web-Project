@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+        <script>
+            var myapp = angular.module("myApp",[]);
+            myapp.controller("myCtrl",function ($scope){ 
+                $scope.fname = "Milton";
+                $scope.lname = "Khan";
+                $scope.fullname = function (){ 
+                    return $scope.fname + " " + $scope.lname;
+                };
+            });
+        </script>
+    </head>
+    <body ng-controller="myCtrl">
+        <div>
+            
+            F_Name:<input type="text" ng-model="fname"/><br/>
+            L_Name:<input type="text" ng-model="lname"/><br/>
+            
+            Full_Name: {{fullname()}}
+<!--            <form ng-app="" name="myForm" ng-init="myText='mortoza@gmail.com'">
+                Email:
+                <input type="email" name="address" ng-model="myText" required/>
+                <h2>Status:</h2>
+                {{myForm.address.$valid}}
+                //<span ng-show="myForm.address.$error.email">Not a Valid Email</span>
+            </form>-->
+        </div>
+    </body>
+</html>

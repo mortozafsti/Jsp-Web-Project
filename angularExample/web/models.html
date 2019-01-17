@@ -27,7 +27,7 @@ and open the template in the editor.
             F_Name:<input type="text" ng-model="fname"/><br/>
             L_Name:<input type="text" ng-model="lname"/><br/>
             
-            Full_Name: {{fullname()}}
+            Full_Name: {{fname + " " + lname | uppercase}}
 <!--            <form ng-app="" name="myForm" ng-init="myText='mortoza@gmail.com'">
                 Email:
                 <input type="email" name="address" ng-model="myText" required/>

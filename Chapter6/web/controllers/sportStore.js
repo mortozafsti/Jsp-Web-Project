@@ -6,7 +6,9 @@
 
 
 angular.module("sportStore")
+
 .controller("sportsStoreCtrl",function ($scope){ 
+        
         
        $scope.data = { 
          products: [

@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="myApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jss/angular.min.js"></script>
+
+        <link href="jss/style.css" rel="stylesheet"/>
+        <link href="jss/css/font-awesome.css" rel="stylesheet"/>
+        <link href="jss/css/font-awesome.min.css" rel="stylesheet"/>
+
+        <link href="jss/bootstrap.css" rel="stylesheet"/>
+        <link href="jss/bootstrap-theme.css" rel="stylesheet"/>
+
+        <!--        <script src="jss/bootstrapjs.js"></script>-->
+        <script>
+            var myApps = angular.module("myApp", []);
+            myApps.controller("myCtrl", function ($scope, $http) {
+                $http.get("personal.json").then(function (response) {
+                    $scope.personaldata = response.data;
+                });
+                $http.get("detail.json").then(function (response) {
+                    $scope.details = response.data;
+                });
+                $http.get("cf.json").then(function (response) {
+                    $scope.cffundamental = response.data;
+                });
+                $http.get("cc.json").then(function (response) {
+                    $scope.ccourse = response.data;
+                });
+                $http.get("bt.json").then(function (response) {
+                    $scope.batchtransfer = response.data;
+                });
+                $http.get("ma.json").then(function (response) {
+                    $scope.monthAssesment = response.data;
+                });
+            });
+        </script>
+    </head>
+    <body ng-controller="myCtrl">
+        <div class="row" style="background-color: graytext;color: white;margin-left: 70px; margin-right: 70px;">
+            <img src="img/logo.png" style="max-height:   50px;max-width: 50px;"/>
+            <div style="margin-left: 10px;">
+                <h3>IDB-BISEW</h3>
+              Islamic Development Bank-Bangladesh Islamic Solidarity Educational Wakf
+                <div class="text-right">
+                    <input style="margin-left: 900px;" type="text" placeholder="search..." class="fa fa-search-plus"/>
+                </div>
+            </div>
+        </div>
+        <div id="wrapper">
+
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toogle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">CarreHub</a>
+                </div>
+                <ul class="nav navbar-top-links navbar-left">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Trainee Status</a></li>
+                            <li><a href="#">Personal Information</a></li>
+                            <li><a href="#">Bank Account</a></li>
+                            <li><a href="#">Academic Details</a></li>
+                            <li><a href="#">Trainee Reference</a></li>
+                            <li><a href="#">Course Project</a></li>
+                            <li><a href="#">View C.V</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Feedback</a></li>
+                    <li class="dropdown">
+                        <a href='#' class="dropdown-toggle" data-toggle="dropdown">Manage <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class='has-sub'>
+                                <a href="#">Change Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li>
+                                <a href="/JobSeeker/ParsonalDetails">
+                                    <i class="fa fa-user fa-fw"></i>Profile (1243288)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <form action="#" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="l8vWZr_Qv_XW84ZK0isIn2I6xCs15rAMNrKQ0QSkxcXnG4HB3jzYoAkBpSW0ZHOrAvgT1WhmTf7qfhkV4EoTGhyQ_Wo1" />            <a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out fa-fw"></i>Log off</a>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+            <div id="page-wrapper">
+                <div class="container-fluid">
+                    <div class="row row-offcanvas row-offcanvas-left">
+                        <div class="col-sm-8 col-md-12 main">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <h2 class="h2">Trainee&#39;s Status</h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <table class="table">
+                                        <tr>
+                                            <td>
+                                                <input type="button" value="Print Detail" style="float: right" onclick="printAttendanceRecord($('#traineeStatusDetail'))" class="btn btn-info" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <h4>Trainee's Status</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div id="traineeStatusDetail">
+                                                <br/>
+                                                <div class="media well">
+                                                    <div class="media-left">
+                                                        <h3 class="h3 bg-info text-center">Photo</h3>
+                                                        <img class="media-object img-rounded" src="img/0004425.jpeg" style="max-width: 150px;"/>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <h3 class="h3 bg-primary text-center" style="color: white">Personal Details</h3>
+                                                        <div class="row">
+                                                            <div class="col-lg-5 col-md-5">
+                                                                <table class="table" ng-repeat="p in personaldata">
+                                                                    <tr>
+                                                                        <td>Trainee Id#</td>
+                                                                        <td>{{p.id}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Name</td>
+                                                                        <td>{{p.name}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Batch Id</td>
+                                                                        <td>{{p.batchid}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Gender</td>
+                                                                        <td>{{p.gender}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Email</td>
+                                                                        <td>{{p.Email}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Contact#</td>
+                                                                        <td>{{p.contact}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Father</td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Father's Contact# </td>
+                                                                        <td>{{p.fcontact}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Mother</td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Mother's Contact# </td>
+                                                                        <td>{{p.mcontact}}</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-lg-7 col-md-7" ng-repeat="pa in details">
+                                                                <table class="table" >
+                                                                    <tr>
+                                                                        <td>Present Address</td>
+                                                                        <td>{{pa.paddress}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Permanent Address</td>
+                                                                        <td>{{pa.paddress1}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>1st Identifier</td>
+                                                                        <td>{{pa.stidentifier}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Relationship</td>
+                                                                        <td>{{pa.relation}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2nd Identifier</td>
+                                                                        <td>{{pa.ndtidentifier}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Relationship</td>
+                                                                        <td>{{pa.relation1}}</td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Contact# </td>
+                                                                        <td>{{pa.contacts}}</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-primary">
+                                                    <div class="panel-heading" style="color: white;">Batch Record(s)</div>
+
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="margin-top: 20px;">
+                                                                <h4 class="h4 bg-info text-center">Computer Fundamentals</h4>
+                                                                <table class="table" ng-repeat="cf in cffundamental">
+                                                                    <tr>
+                                                                        <td>Batch Id</td>
+                                                                        <td>{{cf.batchid}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Leave Count</td>
+                                                                        <td><span class="badge">{{cf.lcount}}</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Absent Count</td>
+                                                                        <td><span class="badge">{{cf.acount}}</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Examination</td>
+                                                                        <td>{{cf.examination}}</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="margin-top: 20px;">
+                                                                <h4 class="h4 bg-info text-center">Core Courses</h4>
+                                                                <table class="table" ng-repeat="cc in ccourse">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Current Batch ID
+                                                                            </td>
+                                                                            <td>
+                                                                                {{cc.cid}}
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                # of Classes attend
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="badge">{{cc.cattend}}</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                # of Classes absent
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="badge">{{cc.cabsent}}</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Grant of Leave
+                                                                            </td>
+                                                                            <td>
+                                                                                <span>{{cc.gleave}}</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Total Course Hours
+                                                                            </td>
+                                                                            <td><span class="badge">{{cc.thour}}</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Completed in %
+                                                                            </td>
+                                                                            <td><span class="badge">{{cc.complete}}</span></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Current Status
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="">
+                                                                                    <b>
+                                                                                        {{cc.cstatus}}
+                                                                                    </b>
+                                                                                </span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                                                                <h4 class="h4 bg-info text-center">Batch Transfer (if Any)</h4>
+                                                                <table class="table" ng-repeat="bt in batchtransfer">
+                                                                    <tr>
+                                                                        <td>Batch Id</td>
+                                                                        <td>{{bt.bid}}</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Leave Count</td>
+                                                                        <td><span class="badge">{{bt.lcount}}</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Absent Count</td>
+                                                                        <td><span class="badge">{{bt.acount}}</span></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Examination</td>
+                                                                        <td>{{bt.examination}}</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-primary">
+                                                    <div class="panel-heading" style="color: white">Attendance Record(s)</div>
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="margin-top: 20px;">
+                                                                <h4 class="h4 bg-info text-center">Absent Record(s)</h4>
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td style="text-align: center">
+                                                                                Absent #
+                                                                            </td>
+                                                                            <td style="text-align: center">
+                                                                                Date
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                1
+                                                                            </td>
+                                                                            <td>
+                                                                                10/10/2018
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                2
+                                                                            </td>
+                                                                            <td>
+                                                                                10/11/2018
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                    <tfoot>
+                                                                        <tr>
+                                                                            <td colspan="2" class="text-right text-danger">
+                                                                                Total number of absents in this course: <span class="badge">2</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tfoot>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="margin-top: 20px;">
+                                                                <h4 class="h4 bg-info text-center">Leave Record(s)</h4>
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Lt #
+                                                                            </td>
+                                                                            <td>
+                                                                                Date
+                                                                            </td>
+                                                                            <td>
+                                                                                Status
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2">
+                                                                                No Leave Granted Yet.
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+                                                                <h4 class="h4 bg-info text-center">Late Record(s)</h4>
+                                                                <table class="table">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Lt #</td>
+                                                                            <td>Date</td>
+                                                                            <td>In Time</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>1</td>
+                                                                            <td>10/11/2018</td>
+                                                                            <td>
+                                                                                09:20:12 AM
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="panel panel-primary">
+                                                    <div class="panel-heading" style="color: white">Assesment Record(s) @ Training Period</div>
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="margin-top: 20px;">
+                                                                <h4 class="h4 bg-info text-center">Monthly Assesment Record(s)</h4>
+                                                                <table class="table table-responsive" >
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th class="text-center" colspan="6">
+                                                                                Exam Record(s) out of <span class="badge">7</span>
+                                                                            </th>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th style="text-align: center">SL</th>
+                                                                            <th>Exam Type</th>
+                                                                            <th>Exam Date</th>
+                                                                            <th style="text-align: center">External</th>
+                                                                            <th>Evidence</th>
+                                                                            <th>Status</th>
+                                                                        </tr>
+                                                                        <tr ng-repeat="ma in monthAssesment">
+                                                                            <td class="text-center">
+                                                                                {{ma.id}}
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <span class="text-primary">{{ma.etype}}</span>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                {{ma.edate}}
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <span>{{ma.external}}</span>
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                <span>{{ma.evidence}}</span>
+                                                                            </td>
+                                                                            <td>
+                                                                                <span class="text-success">{{ma.status}}</span>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                    <tfoot>
+                                                                        <tr>
+                                                                            <td colspan="3" class="text-right">Avg.</td>
+                                                                            <td></td>
+                                                                            <td colspan="2"></td>
+                                                                        </tr>
+                                                                    </tfoot>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="margin-top: 20px;">
+                                                                <h4 class="h4 bg-info text-center">VCE Record(s)</h4>
+                                                                <table class="table table-responsive">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="text-center" colspan="4">
+                                                                                Vendor Certification Record(s) out of <span class="badge">0</span>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="4" style="text-align: center">
+                                                                                VCE Record Not Found
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-primary">
+                                                    <div class="panel-heading" style="color: white">Placement Record</div>
+                                                    <div class="panel-body">
+                                                        <div class="row">
+                                                            <div class="col-md-12 col-lg-12" style="margin-top: 20px; text-align: center">
+                                                                <div class="container-table-inline">
+                                                                    <table class="table table-responsive">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td colspan="2" style="text-align:center">
+                                                                                    Placement Record Not Found
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel panel-primary">
+                                                        <div class="panel-heading">Certificate Record</div>
+                                                        <div class="panel-body">
+                                                            <div class="row">
+                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="margin-top: 20px;">
+                                                                    <h3 class="text-center">Academic Certificate</h3>
+                                                                    <table class="table table-responsive">
+                                                                        <tr>
+                                                                            <td class="text-center">
+                                                                                Delivered Date
+                                                                            </td>
+                                                                            <td class="text-center">
+                                                                                Delivered By
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>01/01/0001 12:00 AM</td>
+                                                                            <td>00000000-0000-0000-0000-000000000000</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6" style="margin-top: 20px;">
+                                                                    <h3 class="text-center">Course Complition Certificate</h3>
+                                                                    <table class="table table-responsive">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>Issued Date</td>
+                                                                                <td class="text-center">
+                                                                                    Issued By
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="2" style="text-align: center;">
+                                                                                    Record Not Found
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12" style="color: white">
+                                                            <p class="bg-primary text-center">
+                                                                Trainee details generated from PIS. Powered by Show&amp;Tell Consulting Ltd. All
+                                                                rights reserved.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="agileinfofooter" style="border-top: 3px solid #2f2d2d; background-color: whitesmoke">
+            <div class="row" style="margin-top: 50px; margin-left: 30px;">
+                <div class="col-md-3">
+
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="" target="_blank" title="www.idb-biew.org">IDB-BISEW</a></li>
+                        <li><a href="" target="_blank" title="www.showtellconsulting.com">Show & Tell Consulting Ltd</a></li>
+
+                        <li><a href="/Home/Abount">About</a></li>
+                    </ul> 
+
+
+                </div>
+                <div class="col-md-3">
+
+                    <ul>
+                        <li>
+                            <p>
+                                <b><u>Placement Cell Helpline</u></b><br />
+                                Contact No: +8801670462007<br />
+                                +88029183006
+                                From 9:00 am to 5:00 pm
+                            </p>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="col-md-4">
+
+                    <address>
+                        <ul>
+                            <li>
+                                <b>Powered by</b> <br /><a href="" title="www.showtellconsulting.com">Show & Tell Consulting Ltd</a>
+                            </li>
+                            House 2/5A (3rd Fl), Road 5, Block A
+                            Lalmatia Housing Estate, Lalmatia
+                            Dhaka, 1207. Bangladesh
+                            +88 02 9132568, +88 02 9132576
+
+                        </ul>
+                    </address>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-6 col-sm-6 col-xs-6 agileinfofooter-grid agileinfofooter-grid1">
+                    <ul>
+                        <li>
+                            <a href="http://idb-bisew.org/"><img src="img/idb-bisew.png" width="55" />&nbsp;<b>IDB-BISEW IT Scholarship Programme</b></a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-md-11 col-sm-11 col-xs-11"><hr/></div>
+                <div class="clearfix"></div>
+
+            </div>
+            <div class="w3lscopyrightaits">                
+                <div class="col-md-8 w3lscopyrightaitsgrid w3lscopyrightaitsgrid1" style="margin-left: 40px; margin-bottom: 40px;margin-top: 40px; background-color: whitesmoke">
+                    <p>&copy; 2019 CareerHub. All Rights Reserved | Powered By Show & Tell Consulting Ltd</p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

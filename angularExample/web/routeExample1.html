@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="muApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--        <link href="js/bootstrap.css" rel="stylesheet"/>
+        <link href="js/bootstrap-theme.css" rel="stylesheet"/>-->
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-route.min.js"></script>
+        <script src="controllers/scripts.js"></script>
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-route.min.js"></script>-->
+        
+        
+        <style type="text/css">
+            .header{ 
+                height: 80px;
+                width: 800px;
+                background-color: gray;
+                text-align: center;
+                margin-left: 10px;
+            }
+            .footer{ 
+                height: 60px;
+                width: 800px;
+                background-color: gray;
+                text-align: center;
+                margin-left: 100px;
+            }
+            .leftmenu{ 
+                height: 400px;
+                width: 200px;
+                background-color: yellowgreen;
+                text-align: center;
+                margin-left: 100px;
+            }
+            .mainContent{ 
+                height: 400px;
+                width: 600px;
+                background-color: ;
+                margin-left: 100px;
+            }
+            a{ 
+                display: block;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <table style="font-family: Arial">
+            <tr>
+                <td colspan="2" class="header">
+                    <h1>WebSite Header</h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="leftmenu">
+                    <a href="#/home">Home</a>
+                    <a href="#/course">Course</a>
+                    <a href="#/students">Students</a>
+                </td>
+                <td class="mainContent">
+            <ng-view></ng-view>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="footer">
+                    <b>WebSite footer</b>
+                </td>
+            </tr>
+        </table>
+        
+    </body>
+</html>

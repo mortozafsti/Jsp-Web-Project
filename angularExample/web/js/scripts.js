@@ -14,6 +14,6 @@ app.controller("homecontroller", function ($scope){
     $scope.homehtml = "This is Home Page";
 });
 app.controller("coursecontroller", function ($scope){ 
-    $scope.course = ["C#","VB.Net","Java","PHP","Angular JS"];
+    $scope.courses = ["C#","VB.Net","Java","PHP","Angular JS"];
 });
 

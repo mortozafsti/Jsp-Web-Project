@@ -9,14 +9,11 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--        <link href="js/bootstrap.css" rel="stylesheet"/>
-        <link href="js/bootstrap-theme.css" rel="stylesheet"/>-->
         <script src="js/angular.min.js"></script>
         <script src="js/angular-route.min.js"></script>
-        <script src="controllers/scripts.js"></script>
-<!--        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-route.min.js"></script>-->
-        
-        
+        <script src="js/scripts.js"></script>
+        <script src="js/query.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular-route.min.js"></script>
         <style type="text/css">
             .header{ 
                 height: 80px;
@@ -24,13 +21,15 @@ and open the template in the editor.
                 background-color: gray;
                 text-align: center;
                 margin-left: 10px;
+                color: white;
             }
             .footer{ 
-                height: 60px;
+                height: 40px;
                 width: 800px;
                 background-color: gray;
                 text-align: center;
                 margin-left: 100px;
+                color: white;
             }
             .leftmenu{ 
                 height: 400px;
@@ -42,16 +41,18 @@ and open the template in the editor.
             .mainContent{ 
                 height: 400px;
                 width: 600px;
-                background-color: ;
+                
                 margin-left: 100px;
             }
             a{ 
                 display: block;
                 padding: 5px;
+                color: white;
             }
         </style>
     </head>
     <body>
+        
         
         <table style="font-family: Arial">
             <tr>
@@ -66,7 +67,7 @@ and open the template in the editor.
                     <a href="#/students">Students</a>
                 </td>
                 <td class="mainContent">
-            <ng-view></ng-view>
+                         <ng-view></ng-view>
                 </td>
             </tr>
             <tr>

@@ -1,6 +1,7 @@
 {
     "elements": {
-        "ng-view": {}
+        "ng-view": {},
+        "data-ng-view": {}
     },
     "attributes": {}
 }

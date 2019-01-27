@@ -1,4 +1,4 @@
-<script src="js/angular.min.js"></script>
+//<script src="js/angular.min.js"></script>
 
 var app = angular.module("muApp", ["ngRoute"]);
   app.config(function ($routeProvider) {

@@ -7,6 +7,9 @@ package com.javaknowledge;
 
 import java.util.Iterator;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Required;
 
 /**
  *
@@ -14,8 +17,18 @@ import java.util.List;
  */
 public class Employee {
     
-    private Address address1;
-    private Address address2;
+    private Address address;
+
+    public Address getAddress() {
+        return address;
+    }
+
+    @Autowired
+    @Qualifier("addqualifer")
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+    
     
     
 //    private int id;
@@ -45,23 +58,8 @@ public class Employee {
 //        }
 //    }
 
-    public Address getAddress1() {
-        return address1;
-    }
-
-    public void setAddress1(Address address1) {
-        this.address1 = address1;
-    }
-
-    public Address getAddress2() {
-        return address2;
-    }
-
-    public void setAddress2(Address address2) {
-        this.address2 = address2;
-    }
+   
     public void show(){ 
-        System.out.println(address1);
-        System.out.println(address2);
+        System.out.println(address);
     }
 }

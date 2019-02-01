@@ -7,14 +7,17 @@ package com.javaknowledge;
 
 import java.util.Iterator;
 import java.util.List;
+import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author Cf-37
  */
+@Component
 public class Employee {
     
     private Address address;
@@ -23,8 +26,12 @@ public class Employee {
         return address;
     }
 
+//    @Autowired
+    //@Qualifier("addqualifer")
+    
     @Autowired
     @Qualifier("addqualifer")
+//    @Resource(name = "address1")
     public void setAddress(Address address) {
         this.address = address;
     }
@@ -60,6 +67,6 @@ public class Employee {
 
    
     public void show(){ 
-        System.out.println(address);
+        System.out.println(address.toString());
     }
 }

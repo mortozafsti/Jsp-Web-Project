@@ -6,9 +6,17 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
+        <style>
+                    .mm{ 
+                        margin-left: 50px;
+                        margin-top: 20px;
+                        margin-right: 30px;
+                    }
+        </style>
     </h:head>
     <h:body>
-        <h:form>
+        <h:form styleClass="mm">
+            <h3>This is Hibernate Crud Operation</h3>
             <h:panelGrid columns="2">
                 <h:outputLabel value="Id:"></h:outputLabel>
                 <h:inputText value="#{studentBean.student.id}"></h:inputText>
@@ -39,14 +47,15 @@
                     <f:selectItem itemValue="Round-40" itemLabel="Round-40"></f:selectItem>
                 </h:selectOneMenu>
 
-                <h:commandButton action="#{studentBean.save()}" value="Submit"></h:commandButton>
+                
+            </h:panelGrid><br/>
+            <h:commandButton action="#{studentBean.save()}" value="Submit"></h:commandButton>
+                <h:commandButton action="#{studentBean.edit()}" value="Update"></h:commandButton>
+                <h:commandButton action="#{studentBean.del()}" value="Delete"></h:commandButton>
                 <h:commandButton action="#{studentBean.reset()}" value="Reset"></h:commandButton>
-            </h:panelGrid>
         </h:form>
         <br/>
-        <br/>
-        <br/>
-        <p:dataTable var="s" value="#{studentBean.list}">
+        <p:dataTable var="s" value="#{studentBean.list}" styleClass="mm">
             <p:column headerText="ID:">
                 <p:outputLabel value="#{s.id}"></p:outputLabel>
             </p:column>

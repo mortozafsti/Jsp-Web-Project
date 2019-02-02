@@ -2,6 +2,7 @@
 package bean;
 
 import entity.Student;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -10,7 +11,7 @@ import service.StudentService;
 
 @ManagedBean
 @ViewScoped
-public class StudentBean {
+public class StudentBean implements Serializable{
     
     private StudentService studentService = new StudentService();
     private Student student;

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h3>This is Hibernate Crud operation</h3>
+            <h:panelGrid columns="2" styleClass="mm">
+                <h:outputLabel value="Id:"></h:outputLabel>
+                <h:inputText value="#{studentBean.student.id}"></h:inputText>
+                
+                <h:outputLabel value="Name:"></h:outputLabel>
+                <h:inputText value="#{studentBean.student.name}"></h:inputText>
+                
+                <h:outputLabel value="Gender:"></h:outputLabel>
+                <h:selectOneRadio value="#{studentBean.student.gender}">
+                    <f:selectItem itemValue="Male" itemLabel="Male"></f:selectItem>
+                    <f:selectItem itemValue="FeMale" itemLabel="FeMale"></f:selectItem>
+                </h:selectOneRadio>
+                
+                 <h:outputLabel value="C_Course"></h:outputLabel>
+                 <h:selectManyCheckbox value="#{studentBean.completeCourse}">
+                    <f:selectItem itemValue="SSC" itemLabel="SSC"></f:selectItem>
+                    <f:selectItem itemValue="HSC" itemLabel="HSC"></f:selectItem>
+                    <f:selectItem itemValue="Diploma" itemLabel="Diploma"></f:selectItem>
+                    <f:selectItem itemValue="MBA" itemLabel="MBA"></f:selectItem>
+                </h:selectManyCheckbox>
+                 
+                 <h:outputLabel value="Round:"></h:outputLabel>
+                 <h:selectOneMenu value="#{studentBean.student.round}">
+                    <f:selectItem itemValue="" itemLabel="Select the Round"></f:selectItem>
+                    <f:selectItem itemValue="Round-37" itemLabel="Round-37"></f:selectItem>
+                    <f:selectItem itemValue="Round-38" itemLabel="Round-38"></f:selectItem>
+                    <f:selectItem itemValue="Round-39" itemLabel="Round-39"></f:selectItem>
+                    <f:selectItem itemValue="Round-40" itemLabel="Round-40"></f:selectItem>
+                </h:selectOneMenu>
+            </h:panelGrid><br/>
+            <h:commandButton action="#{studentBean.save()}" value="Submit"></h:commandButton>
+            <h:commandButton action="#{studentBean.edit()}" value="Update"></h:commandButton>
+            <h:commandButton action="#{studentBean.del()}" value="Delete"></h:commandButton>
+            <h:commandButton action="#{studentBean.reset()}" value="Reset"></h:commandButton>
+    
+        </h:form>
+        <br/>
+        <p:dataTable var="s" value="#{studentBean.list}">
+            <p:column headerText="Id:">
+                <p:outputLabel value="#{s.id}"></p:outputLabel>
+            </p:column>
+            <p:column headerText="Name:">
+                <p:outputLabel value="#{s.name}"></p:outputLabel>
+            </p:column>
+            <p:column headerText="Gender:">
+                <p:outputLabel value="#{s.gender}"></p:outputLabel>
+            </p:column>
+            <p:column headerText="C_Course:">
+                <p:outputLabel value="#{s.c_complete}"></p:outputLabel>
+            </p:column>
+            <p:column headerText="Round:">
+                <p:outputLabel value="#{s.round}"></p:outputLabel>
+            </p:column>
+        </p:dataTable>
+    </h:body>
+</html>
+

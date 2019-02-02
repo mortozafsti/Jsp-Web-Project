@@ -6,9 +6,16 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
+        <style>
+                    .mm{ 
+                        margin-left: 50px;
+                        margin-top: 20px;
+                        margin-right: 30px;
+                    }
+        </style>
     </h:head>
     <h:body>
-        <h:form>
+        <h:form styleClass="mm">
             <h3>This is Hibernate Crud operation</h3>
             <h:panelGrid columns="2" styleClass="mm">
                 <h:outputLabel value="Id:"></h:outputLabel>
@@ -47,9 +54,9 @@
     
         </h:form>
         <br/>
-        <p:dataTable var="s" value="#{studentBean.list}">
+        <p:dataTable var="s" value="#{studentBean.list}" styleClass="mm">
             <p:column headerText="Id:">
-                <p:outputLabel value="#{s.id}"></p:outputLabel>
+                <p:outputLabel value="#{s.id}"></p:outputLabel>   
             </p:column>
             <p:column headerText="Name:">
                 <p:outputLabel value="#{s.name}"></p:outputLabel>

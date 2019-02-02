@@ -27,6 +27,7 @@ public class StudentService {
         Transaction t = session.beginTransaction();
         session.delete(student);
         t.commit();
+        session.close();
 
     }
 

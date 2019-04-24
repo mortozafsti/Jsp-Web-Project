@@ -9,7 +9,13 @@ public class Problem1 {
         int b = 8;
         
         for (int i = 1; i <= n; i++) {
-            System.out.println("Case " + i + " : " + (a+b));
+            
+            System.out.println("Case " + i + " : " + b);
+            
+            for (int j = 2; j <= n; j++) {
+                System.out.println("Case " + i + " : " + (a+b));
+            }
+            
         }
     }
 }

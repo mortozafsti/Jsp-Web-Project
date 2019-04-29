@@ -9,14 +9,13 @@ public class Problem9 {
         
         Scanner scan = new Scanner(System.in);
         
-        int employeeNumber = scan.nextInt();
-        int workingHour = scan.nextInt();
-        float amountPerHour = scan.nextFloat();
+        String name = scan.nextLine();
+        double fixedSalary = scan.nextDouble();
+        double totalSale = scan.nextDouble();
         
-        float salary  = workingHour * amountPerHour;
+        double totalsalary  = fixedSalary + (totalSale * 15) / 100;
         
-        System.out.println("NUMBER = "+employeeNumber);
-        System.out.printf("SALARY = U$ %.2f\n",salary);
+        System.out.printf("TOTAL = R$ %.2f\n",totalsalary);
        
     }
 }

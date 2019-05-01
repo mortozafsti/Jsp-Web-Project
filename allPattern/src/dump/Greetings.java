@@ -5,13 +5,18 @@
  */
 package dump;
 
+import java.time.LocalDate;
+import java.time.Month;
+
 /**
  *
  * @author Cf-37
  */
 public class Greetings {
     public static void main(String[] args) {
-        System.out.println("Hello " + args[0]);
+        LocalDate date = LocalDate.of(2012, 01, 25);
+        date.plusDays(15);
+        System.out.println(date);
     }
     
 }

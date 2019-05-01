@@ -9,19 +9,20 @@ public class Problem10 {
         
         Scanner scan = new Scanner(System.in);
         
-        int pcode1,punit1 = 0,pcode2,punit2;
-        float price1 = 0,price2,paid1,paid2,totalPay;
+         int pcode1 = scan.nextInt();
+         int punit1 = scan.nextInt();
+         float price1 = scan.nextFloat();
+         
+         int pcode2 = scan.nextInt();
+         int punit2 = scan.nextInt();
+         float price2 = scan.nextFloat();
+         
+         float ptotal = punit1 * price1;
+         float ptota2 = punit2 * price2;
+         
+         float totalPay = ptotal + ptota2;
         
-
-        float t1 = scan.nextInt(punit1); 
-//        float t2 = scan.nextFloat(price1); 
-        
-         int productUnit2 = scan.nextInt();
-         int productPrice2 = scan.nextInt();
-        
-       // float totalPay  = (productUnit1*productPrice1) + (productUnit2*productPrice2);
-        
-       //System.out.printf("Valor a pagar = R$ %.2f\n",totalPay);
+       System.out.printf("VALOR A PAGAR: R$ %.2f\n",totalPay);
        
     }
 }

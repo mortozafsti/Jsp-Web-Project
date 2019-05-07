@@ -24,5 +24,11 @@ public class StringR {
            c += i;
         }
         System.out.println(c);
+        for (int i = 0; i < s.length(); i++) {
+            if (i != 3) {
+                c += i; 
+            }
+        }
+        System.out.println(c);
     }
 }

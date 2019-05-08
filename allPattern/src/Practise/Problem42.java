@@ -3,23 +3,28 @@ package Practise;
 import java.util.Scanner;
 
 public class Problem42 {
-    
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int c = scan.nextInt();
+        int n = scan.nextInt();
+        int[] a = new int[n];
+        int i,j,num,temp=0;
         
-         a = a + b;
-         b = a - b;
-        
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-      
+        for (i = 0; i < a.length; i++) {
+            num = 1;
+            for (j = i+1; j < a.length; j++) {
+                if (a[j] < a[num]) {
+                     num = j;
+                }
+            }
+            temp = a[i];
+            a[i] = a[num];
+            a[num] = temp;
+        }
+        for (i = 0; i < a.length; i++) {
+            System.out.println(a[i]+" ");
+        }
         
     }
-} 
-
-    
+}

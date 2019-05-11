@@ -18,10 +18,8 @@ public class ArrayImpl {
             arr1[i] = x;
         }
         Arrays.sort(arr); 
-        //System.out.println(arr);
         
         for (int i = 0; i < n; i++) {
-        
             System.out.println(arr[i]);
         }
         System.out.println();

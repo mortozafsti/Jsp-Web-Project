@@ -10,6 +10,7 @@ package sexercisek;
  * @author Cf-37
  */
 public class NewClass {
+    
     public static void main(String[] args) {
         
         //Scanner read = new Scanner(System.in);

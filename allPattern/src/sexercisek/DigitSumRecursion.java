@@ -10,7 +10,7 @@ public class DigitSumRecursion {
     }
     
     static int DigitSumRecursive(int n){ 
-        int sum= 0;
+        int sum = 0;
         if (n == 0) {
            return sum;
         }else{ 

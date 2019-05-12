@@ -83,7 +83,7 @@ public class VectorImple {
         System.out.println(vector);
         
         int[] arr = new int[5];
-        arr = vector.toArray();
+        arr = vector.toArray(arr);
         
         System.out.println("Th vector is: ");
         for (int i = 0; i < arr.length; i++) {

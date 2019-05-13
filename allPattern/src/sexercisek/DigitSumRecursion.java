@@ -5,12 +5,12 @@ public class DigitSumRecursion {
     
     public static void main(String[] args) {
         
-        int d = DigitSumRecursive(523);
+        int d = DigitSumRecursive(789);
         System.out.println(d);
     }
-    
+    static int sum = 0;
     static int DigitSumRecursive(int n){ 
-        int sum = 0;
+       
         if (n == 0) {
            return sum;
         }else{ 

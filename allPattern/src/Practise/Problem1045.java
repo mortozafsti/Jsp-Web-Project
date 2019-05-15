@@ -11,7 +11,7 @@ public class Problem1045 {
         double A = scan.nextDouble();
         double B = scan.nextDouble();
         double C = scan.nextDouble();
-        
+
         if (A >= B + C) {
             System.out.println("NAO FORMA TRIANGULO");
         } else if (A * A == B * B + C * C) {
@@ -25,7 +25,7 @@ public class Problem1045 {
         } else if ((A == B) || (B == C)) {
             System.out.println("TRIANGULO ISOSCELES");
         }
-      
+
     }
 
 }

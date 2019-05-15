@@ -13,8 +13,8 @@ public class Problem1047 {
         int ETH = scan.nextInt();
         int ETM = scan.nextInt();
         
-        if (STH >= ETH && STM >= ETM) {
-            System.out.printf("O JOGO DUROU %d HORA(S)\n", 24-(STH-ETH),1-(STM-ETM));
+        if (STH >= ETH) {
+            System.out.printf("O JOGO DUROU %d HORA(S)\n", 60);
         }else{ 
             //System.out.printf("O JOGO DUROU %d HORA(S)\n",(ET-ST));
         }

@@ -7,7 +7,8 @@ public class Stack_Demo {
 
     static Scanner scan = new Scanner(System.in);
     static int n = scan.nextInt();
-    static Stack st = new Stack(n);
+    
+    static Stack<Integer> st = new Stack<Integer>();
     //static int ll;
     public static void main(String[] args) {
 
@@ -18,13 +19,13 @@ public class Stack_Demo {
 //        System.out.println(st);
         int maxvalue = -999;
         while (!st.empty()) {            
-            int ll = (int) st.pop();
+            int ll =  st.peek();
             if (maxvalue < ll) {
                 maxvalue = ll;
             }st.pop();
         }
         
-        System.out.println();
+        System.out.println(maxvalue);
     }
 
 }

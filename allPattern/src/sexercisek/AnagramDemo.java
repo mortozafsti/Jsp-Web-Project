@@ -8,6 +8,8 @@ public class AnagramDemo {
     
     
     public static void main(String[] args) {
+        
+        
         Scanner scan = new Scanner(System.in);
         char a = scan.equals(scan);
         String b = scan.next();
@@ -26,5 +28,8 @@ public class AnagramDemo {
         
         Arrays.sort(a.);
     }
+   
+   
+   
     
 }

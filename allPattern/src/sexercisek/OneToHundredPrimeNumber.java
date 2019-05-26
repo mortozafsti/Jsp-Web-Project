@@ -15,9 +15,9 @@ public class OneToHundredPrimeNumber {
                 }
             }
             if (x == true) {
-                System.out.println("Not Prime");
+                System.out.println(i);
             } else {
-                System.out.println("Prime");
+                System.out.println();
             }
         }
     }

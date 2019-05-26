@@ -4,21 +4,22 @@ public class PerfectAndNotPerfect {
 
     public static void main(String[] args) {
         int sum = 0;
-        int n =0;
-       
+
         for (int i = 1; i <= 100; i++) {
-              n = i;
-            for (int j = 1; j <= i; j++) {
+             int n = i;
+             int ll  = i;
+             sum=0;
+            for (int j = 1; j <n; j++) {
                 if (n % j == 0) {
                     sum += j;
                 }
             }
+            if (sum == ll) {
+                System.out.println("Perfect");
+            } else {
+                System.out.println("Not Perfect");
+            }
         }
-        
-        if (sum == n) {
-            System.out.println("Perfect");
-        }else{ 
-            System.out.println("Not Perfect");
-        }
+
     }
 }

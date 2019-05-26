@@ -18,10 +18,11 @@ public class PerfectNumber {
             }
         }
         if (sum == n) {
-            count += 1;
+            //count += 1;
+            System.out.println(n+" Perfect Number");
         }else{ 
              System.out.println(n+" is Not Perfect Number");
         }
-        System.out.println("Hou Many Perfect Number: "+count);
+        //System.out.println("Hou Many Perfect Number: "+count);
     }
 }

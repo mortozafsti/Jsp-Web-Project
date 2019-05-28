@@ -12,7 +12,7 @@ public class FindMax2 {
         int x = 0;
         int po = 0;
         
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i < n; i++) {
             x = scan.nextInt();
             if (x > a) {
                a = x;

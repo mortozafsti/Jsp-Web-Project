@@ -11,5 +11,8 @@ public class Problem1095 {
             System.out.println("I=" + I + " J=" + J);
         }
         
+        
+        
+        
     }
 }

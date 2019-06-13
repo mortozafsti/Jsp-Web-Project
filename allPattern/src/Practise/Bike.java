@@ -1,0 +1,8 @@
+
+package Practise;
+
+public interface Bike {
+    
+    public void start();
+    
+}

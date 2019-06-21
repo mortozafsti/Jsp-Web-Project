@@ -20,7 +20,7 @@ public class PrimeNumberUsingRecursion {
 
         PrimeNumberUsingRecursion p = new PrimeNumberUsingRecursion();
         int c = p.primeNumber(11);
-
+        
         if (c == 2) {
             System.out.println("prime number "+i+" "+count);
         } else {

@@ -21,6 +21,10 @@ public class Exercise1 {
         Arrays.sort(array);
         System.out.println("Sorted numeric array : "+Arrays.toString(array));
         
+        System.out.println("Original String array : "+Arrays.toString(array2));
+        Arrays.sort(array2);
+        System.out.println("Sorted String array : "+Arrays.toString(array2));
+        
     }
     
 }

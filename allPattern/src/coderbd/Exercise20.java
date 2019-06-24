@@ -11,7 +11,6 @@ public class Exercise20 {
         String[] array = new String[]{"Milton","David","Harris",
             "Jon","Lukas","Lukaka"
         };
-        
         ArrayList<String> list = new ArrayList<String>(Arrays.asList(array));
         System.out.println(list);
         

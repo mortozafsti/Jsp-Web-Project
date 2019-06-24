@@ -1,10 +1,7 @@
 
 package coderbd;
-
 import java.util.Arrays;
-
 public class Exercise17 {
-    
     public static void main(String[] args) {
         
         int[] array = {233,400,350,200,100,120,250};
@@ -17,9 +14,6 @@ public class Exercise17 {
         while (array[position] == array[array.length-1]) {            
              position--;
         }
-        
         System.out.println("Second Largest Value: "+array[position]);
-        
-    }
-    
+    } 
 }

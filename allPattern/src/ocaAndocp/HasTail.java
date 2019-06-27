@@ -13,6 +13,7 @@ abstract class Puma implements HasTail{
     }
 }
 class Congure extends Puma{
+    
     public static void main(String[] args) {
         Puma p = new Puma();
         System.out.println(p.getTailLength());
@@ -21,8 +22,7 @@ class Congure extends Puma{
     public int getTailLength(int length){
         return 2;
     }
-    
-    
+
     public static void main(String[] args) {
         
     }

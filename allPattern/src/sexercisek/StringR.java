@@ -22,7 +22,7 @@ public class StringR {
 //    }
     public static void main(String[] args) {
        // Scanner scan = new Scanner(System.in);
-        String s = "madam";
+        String s = "milton";
         
         String c = "";
         for (int i = s.length() - 1; i >= 0; i--) {

@@ -2,6 +2,7 @@
 package sexercisek;
 
 public class CountInputNumber {
+    
     public static void main(String[] args) {
         
         int d = CountNum(2345);
@@ -17,4 +18,5 @@ public class CountInputNumber {
         }
         return count;
     } 
+    
 }

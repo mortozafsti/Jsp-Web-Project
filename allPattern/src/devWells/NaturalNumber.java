@@ -4,7 +4,9 @@ public class NaturalNumber {
     
     public static void main(String[] args) {
         
-        nnumber(0);
+        int d = nnumber(0);
+        System.out.println(d);
+        
         
     }
     

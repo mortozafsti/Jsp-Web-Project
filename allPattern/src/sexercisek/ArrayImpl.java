@@ -4,7 +4,7 @@ package sexercisek;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArrayImpl {
+public  class  ArrayImpl {
     
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

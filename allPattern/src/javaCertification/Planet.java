@@ -1,28 +1,23 @@
-
 package javaCertification;
 
-public abstract class Planet {
-    
-    protected void revolve(){
-        
-    }
-    
-    abstract void rotate(){
-        
-    }
-    
-}
-class Earth extends Planet
-        
-    }
-    
-}
-class Earth extends Planet
+abstract class Planet {
 
-    @Override
-    void rotate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    protected void revolve() {
+        
     }
-(){
-    
+
+    abstract void rotate();
+
+}
+
+class Earth extends Planet {
+
+    public void revolve() {
+
+    }
+
+    protected void rotate() {
+
+    }
+
 }

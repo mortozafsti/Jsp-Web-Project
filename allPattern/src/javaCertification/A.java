@@ -6,6 +6,10 @@ public class A {
     public A() {
         System.out.println("A ");
     }
+
+    void test() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
 class B extends A{
